@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const CryptoJS = require("crypto-js");
 
 const UserSchema = new mongoose.Schema(
   {
@@ -10,5 +11,16 @@ const UserSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
+// Middleware para encriptar contraseña antes de guardar
+UserSchema.pre('save', function(next) {
+  if (this.isModified('password')) {
+    this.password = CryptoJS.AES.encrypt(
+      this.password,
+      process.env.SECRET_KEY
+    ).toString();
+  }
+  next();
+});
 
 module.exports = mongoose.model("User", UserSchema);
