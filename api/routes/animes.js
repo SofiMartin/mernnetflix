@@ -3,7 +3,7 @@ const animeController = require("../controllers/animeController");
 const { verifyToken, verifyAdmin, verifyContentAccess } = require("../middlewares/verifyToken");
 
 // Obtener todos los animes (paginados y filtrados)
-router.get("/", verifyToken, animeController.getAllAnimes);
+router.get("/", animeController.getAllAnimes);
 
 // Buscar animes por término
 router.get("/search", verifyToken, animeController.searchAnimes);
