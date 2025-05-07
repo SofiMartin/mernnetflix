@@ -2,6 +2,9 @@
 
 Una API REST completa para una plataforma de streaming de anime construida con Node.js, Express y MongoDB.
 
+##DEPLOY:
+https://railway.com/project/90e049a5-1731-426f-9405-dd5a52ec04df/service/ff93ee04-9f87-42db-b5b4-4654880eb30a?environmentId=75e1db7f-383b-46ca-9653-c1d983591af1&id=0184ac31-3f80-4683-8ab5-9efcec2e1ca7#deploy
+
 ## Descripción general
 
 Este proyecto proporciona una solución backend completa para un servicio de streaming de anime con autenticación de usuarios, gestión de perfiles, organización de contenido y listas de seguimiento personalizadas. La API admite características como filtrado de contenido por clasificación de edad, soporte de múltiples perfiles por usuario (similar a Netflix) e integración con bases de datos externas de anime.
