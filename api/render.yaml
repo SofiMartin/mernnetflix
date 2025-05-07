@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: anime-streaming-api
+    runtime: node
+    buildCommand: cd api && yarn install
+    startCommand: cd api && yarn start
+    envVars:
+      - key: NODE_ENV
+        value: production
